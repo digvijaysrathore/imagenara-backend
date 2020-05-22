@@ -9,7 +9,7 @@ router.post("/search", (req, res) => {
     fetch(`https://api.unsplash.com/search/photos/?query=${search}&color=${colors}&orientation=${orientation}&client_id=dxB1SfFCctr5KEHfBbBXL4KJ7EqM2RwxQDUWUkYMsFw`)
     .then(res => res.json())
     .then((json) => {
-        const variable = json.results
+        const variable = json.results[0]
         console.log(variable)
         if(variable === undefined){
             return res.status(200).render("error")
