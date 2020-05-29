@@ -30,8 +30,7 @@ router.post("/search", (req, res) => {
                 return res.status(200).render("error")
             } else {
                 const image0 = json.results[0].urls.small
-                const image1 = json.results[1].urls.small
-                return res.status(200).render("search", {data: [image0, image1]})
+                return res.status(200).render("search", {data: [image0]})
             }
         })
     }
