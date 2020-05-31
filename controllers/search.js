@@ -13,7 +13,7 @@ router.post("/search", (req, res) => {
             const variable = json.results[0]
             console.log(variable)
             if(variable === undefined){
-                return res.status(200).json({
+                return res.status(400).json({
                     err: "Failed to get images."
                 })
             } else {
@@ -28,7 +28,7 @@ router.post("/search", (req, res) => {
             const variable = json.results[0]
             console.log(variable)
             if(variable === undefined){
-                return res.status(200).json({
+                return res.status(400).json({
                     err: "Failed to get images."
                 })
             } else {
